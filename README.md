@@ -14,6 +14,8 @@ graph TD;
 
 # Programming
 
+### Table of Contents
+
 - Linux
   - Terminal
 - C++
@@ -34,6 +36,7 @@ graph TD;
 
 ```Bash
 ## terminal bash
+$ cd C++/
 g++ -o myprogram.exec myprogram.C
 ```
 
@@ -41,7 +44,16 @@ g++ -o myprogram.exec myprogram.C
 
 ```Bash
 ## terminal bash
+$ cd python 
 $ python myprogram.py
+```
+
+## Python
+
+```Bash
+## terminal bash
+$ cd bash
+$ source screenshot.sh
 ```
 
 
@@ -53,3 +65,70 @@ $ python myprogram.py
 - [C++ tutorials](https://www.cplusplus.com/doc/tutorial/variables/)
 
 - [w3schools](https://www.w3schools.com/python/default.asp)
+
+- [Introduction to programming](https://beknazarsuranchiyev.medium.com/introduction-to-programming-56dda6a1cbd7)
+- [Notes On Using Data Science & Machine Learning](https://chrisalbon.com/#machine_learning)
+
+  - **Machine Learning - Basics**
+  - Vectors, Matrices, And Arrays
+  - Preprocessing Structured Data
+  - Preprocessing Images
+  - Preprocessing Text
+  - Preprocessing Dates And Times
+  - Feature Engineering
+  - Feature Selection
+  - Model Evaluation
+  - Model Selection
+  - Linear Regression
+  - Logistic Regression
+  - Trees And Forests
+  - Nearest Neighbors
+  - Support Vector Machines
+  - Naive Bayes
+  - Clustering
+  - **Deep Learning**
+    - Setup
+    - Keras
+    - PyTorch
+  - **Python** 
+    - Basics
+    - Data Wrangling
+    - Data Visualization
+    - Web Scraping
+    - Testing
+    - Logging
+  - **Statistics**
+    - Basics
+    - Frequentist
+    - Scala
+    - Regular Expressions
+  - **Snowflake**
+    - Basics
+    - Tables
+  - **PostgreSQL**
+    - Basics
+    - Add, Delete, Change Rows
+    - Merging And Joining
+    - Tables
+    - Text
+    - Numeric
+    - Dates
+    - Interview Questions
+  - **Mathematics**
+  - **AWS** Amazon Web Services (AWS) - Cloud Computing Services
+  - **Computer Science**
+    - Algorithms
+  - **Linux Command Line**
+    - Basics
+    - Inputs And Outputs
+    - Search
+    - Text
+    - Flow Control
+    - Processes
+    - Shell Scripts
+  - **Git And GitHub**
+  - **Machine Learning Engineering**
+  - **Kubeflow**
+  - **Docker**
+  - **Dockerfiles**
+  - PHP
