@@ -48,7 +48,7 @@ $ cd python
 $ python myprogram.py
 ```
 
-## Python
+## Bash Script
 
 ```Bash
 ## terminal bash
