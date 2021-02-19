@@ -1,4 +1,4 @@
-# The Big Picture
+# The Big Picture - To study
 
 ```mermaid
 graph TD;
@@ -59,14 +59,35 @@ $ source screenshot.sh
 
 # Resources
 
+### Programming
+- [Introduction to programming](https://beknazarsuranchiyev.medium.com/introduction-to-programming-56dda6a1cbd7)
+
+
+### Git
+
+- [ Version Control System(VCS)](https://git-scm.com/)
+- [The 13 Git Commands I Use Daily](https://medium.com/analytics-vidhya/13-git-commands-i-use-daily-14e3ad562068)
+### Python
+- [w3schools](https://www.w3schools.com/python/default.asp)
+- [Learning Python: From Zero to Hero](https://medium.com/the-renaissance-developer/learning-python-from-zero-to-hero-8ceed48486d5)
+
+##### Pandas
+- [The Mastery of Pandas - I](https://medium.com/swlh/the-mastery-of-pandas-i-50156db42125)
+
+- [The Mastery of Pandas - II](https://medium.com/analytics-vidhya/the-mastery-of-pandas-ii-bc4cf58c04f5)
+
+ 
+### Linux
+
 - [20 Basic Linux Commands for Beginners!](https://medium.com/100-days-of-linux/20-basic-linux-commands-for-beginners-78516ab936d6)
+- [Basic Linux command line tutorial to start developing in Ubuntu Linux](https://medium.com/@zibon/basic-linux-command-lines-to-get-started-developing-in-ubuntu-linux-b54def1c2190)
+
+### C++
 
 - [How to Learn C++: The Complete Guide for Beginners](https://medium.com/educative/how-to-learn-c-the-complete-guide-for-beginners-eb26b20c7ff0)
 - [C++ tutorials](https://www.cplusplus.com/doc/tutorial/variables/)
 
-- [w3schools](https://www.w3schools.com/python/default.asp)
-
-- [Introduction to programming](https://beknazarsuranchiyev.medium.com/introduction-to-programming-56dda6a1cbd7)
+### Data Science and Machine Learning
 - [Notes On Using Data Science & Machine Learning](https://chrisalbon.com/#machine_learning)
 
   - **Machine Learning - Basics**
