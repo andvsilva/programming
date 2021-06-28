@@ -1,12 +1,17 @@
 #!/bin/bash
 
+# start time 
+start=$SECONDS
+
+echo "time(start): ${start}"
+
 # screenshot and save image
 
 # sudo apt install imagemagick
 
 mkdir -p images_jpg
 
-for image in {0..4};
+for image in {0..500};
 do
 	echo "# ${image} screenshot..."
 	scrot img_${image}.png
@@ -20,3 +25,10 @@ do
 done
 
 echo "All done"
+end=`date +%s.%N`
+
+# end time 
+end=$SECONDS
+
+# time execution
+echo "duration: $((end-start)) seconds."
