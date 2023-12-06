@@ -2,4 +2,6 @@
 *.jpg
 *.exe
 *.exec
-
+*.zip
+*.csv
+*.sqlite
