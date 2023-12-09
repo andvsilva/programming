@@ -33,3 +33,20 @@ seaborn==0.13.0
 pip install -r requirements.txt 
 ```
 
+```
+Modeling
+@andvsilva - sáb 09 dez 2023 16:36:53
+
+Testing...
+- Logistic Regression
+- Random Forest 
+- Decision Tree
+- AdaBoost Model
+
+and 
+
+- XGBClassifier
+- LightGBM
+- CatBoostClassifier
+
+```
