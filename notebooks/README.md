@@ -66,8 +66,7 @@ Applying the Receiver Operating Characteristic (**ROC**) curve is a graphical re
 
 - **Diagonal Line**: Represents the performance of a random classifier.
 
-![](images/roc_curve_models.png)
-
+![ROC curves](images/roc_curve_models.png)
 
 ```bash
 ## @andvsilva - 10 dez 2023 19:14:35
