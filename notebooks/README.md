@@ -22,10 +22,17 @@ pip install pipreqs
 pipreqs ~/repo/programming/notebooks
 
 # requirements.txt libraries for the project
+Faker==18.9.0
+feather==0.1.2
+feather_format==0.4.1
+icecream==2.1.3
 matplotlib==3.7.0
 numpy==1.24.4
 pandas==1.3.5
 seaborn==0.13.0
+snoop==0.4.3
+tqdm==4.66.1
+varname==0.12.2
 
 # Just run this command to install
 # the libraries for the project.
@@ -54,7 +61,7 @@ Testing and Results
 
 ### Results
 
-For the models listed above and I find the follow results:
+For the models listed above and I found the following results:
 
 Applying the Receiver Operating Characteristic (**ROC**) curve is a graphical representation used in binary and multi-class classification problems to assess the performance of a classification model at various thresholds.
 
