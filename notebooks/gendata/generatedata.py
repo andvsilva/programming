@@ -10,6 +10,7 @@ import os
 from faker import Faker
 from varname import nameof
 from icecream import ic
+from tqdm import tqdm
 
 # Pandas has a high consume of memory RAM usage
 # release memory RAM
@@ -83,12 +84,15 @@ def generate_fakedata(nrows):
     irow = 1
     name_cols, database = make_database()
     df = pd.DataFrame(columns=name_cols)
-        
-    while(irow <= nrows):
-        name_cols, database = make_database()
-        df_database = pd.DataFrame([database])
-        df = pd.concat([df if not df.empty else None, df_database ], ignore_index=True)
-        irow += 1
+    
+    with tqdm(total=nrows, desc="Waiting...", bar_format="{l_bar}{bar} [ time left: {remaining} ]") as pbar:
+        while(irow <= nrows):
+            pbar.update(1)
+            time.sleep(0.00468)
+            name_cols, database = make_database()
+            df_database = pd.DataFrame([database])
+            df = pd.concat([df if not df.empty else None, df_database ], ignore_index=True)
+            irow += 1
 
     return df
 

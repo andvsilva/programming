@@ -34,19 +34,77 @@ pip install -r requirements.txt
 ```
 
 ```
+Two files to performance the cleaning and modeling:
+
+- exploredata.ipynb
+- modeling.ipynb
+
 Modeling
 @andvsilva - sáb 09 dez 2023 16:36:53
 
-Testing...
+Testing and Results
 - Logistic Regression
 - Random Forest 
 - Decision Tree
 - AdaBoost Model
-
-and 
-
 - XGBClassifier
 - LightGBM
 - CatBoostClassifier
+```
 
+### Results
+
+For the models listed above and I find the follow results:
+
+Applying the Receiver Operating Characteristic (**ROC**) curve is a graphical representation used in binary and multi-class classification problems to assess the performance of a classification model at various thresholds.
+
+#### Here is a basic interpretation of the ROC curve:
+
+- **Top-Left Corner**: Ideal scenario where the model has a high true positive rate and a low false positive rate across various thresholds.
+
+- **Bottom-Right Corner**: Represents a model that performs no better than random chance.
+
+- **Diagonal Line**: Represents the performance of a random classifier.
+
+![](images/roc_curve_models.png)
+
+
+```bash
+## @andvsilva - 10 dez 2023 19:14:35
+-------------------------Metrics-----------------------
+LogisticRegression model:
+accuracy........:75.7%
+score...........:63.69
+Mean Absolute Error: 0.24333
+-------------------------------------------------------
+Random Forest model:
+accuracy........:98.9%
+score...........:98.96
+Mean Absolute Error: 0.01133
+-------------------------------------------------------
+Decision Tree model:
+accuracy........:96.2%
+score...........:94.88
+Mean Absolute Error: 0.038
+-------------------------------------------------------
+AdaBoost model:
+accuracy........:95.19%
+score...........:93.82
+Mean Absolute Error: 0.04767
+-------------------------------------------------------
+XGBClassifier model:
+accuracy........:98.9%
+score...........:98.53
+Mean Absolute Error: 0.01133
+-------------------------------------------------------
+CatBoostClassifier model:
+accuracy........:99.1%
+score...........:98.85
+Mean Absolute Error: 0.00867
+-------------------------------------------------------
+LightGBMClassifier model:
+accuracy........:98.6%
+score...........:98.34
+Mean Absolute Error: 0.014
+-------------------------------------------------------
 ```
