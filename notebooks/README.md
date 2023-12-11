@@ -11,6 +11,9 @@ To study
  - Modeling 
  - Machine Learning
 
+```bash
+source dataset: https://www.kaggle.com/code/bashirabubakar/human-resources-analytics-employee-attrition/notebook
+```
 
 ### Requirements
 
@@ -58,6 +61,12 @@ Testing and Results
 - LightGBM
 - CatBoostClassifier
 ```
+
+```bash
+drop the column: Emp ID.
+```
+
+
 
 ### Results
 
