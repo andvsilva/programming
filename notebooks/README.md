@@ -114,3 +114,19 @@ score...........:98.34
 Mean Absolute Error: 0.014
 -------------------------------------------------------
 ```
+
+
+## Deep Learning - Keras.
+
+```bash
+@andvsilva 10 dez 2023 22:09:15
+
+Working in progress! The next step is to workaround, the parameters.
+
+Keras is not so good yet!
+```
+
+### Results
+
+![](images/roc_curve_dlkeras.png)
+
