@@ -66,8 +66,6 @@ Testing and Results
 drop the column: Emp ID.
 ```
 
-
-
 ### Results
 
 For the models listed above and I found the following results:
@@ -139,3 +137,13 @@ Keras is not so good yet!
 
 ![](images/roc_curve_dlkeras.png)
 
+
+## Selecting the best models &rarr; metrics:
+
+![](../notebooks/images/modelmetrics.png)
+
+```bash
+@andvsilva 11 dez 2023
+
+the BEST model according to metrics: 'CatBoostClassifier'
+```
