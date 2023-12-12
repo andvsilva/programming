@@ -48,6 +48,7 @@ Two files to performance the cleaning and modeling:
 
 - exploredata.ipynb
 - modeling.ipynb
+- bestmodels.ipynb
 
 Modeling
 @andvsilva - sáb 09 dez 2023 16:36:53
@@ -141,6 +142,8 @@ Keras is not so good yet!
 ## Selecting the best models &rarr; metrics:
 
 ![](../notebooks/images/modelmetrics.png)
+
+![](../notebooks/images/roc_curve_bestmodels.png)
 
 ```bash
 @andvsilva 11 dez 2023
