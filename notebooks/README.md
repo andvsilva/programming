@@ -148,5 +148,11 @@ Keras is not so good yet!
 ```bash
 @andvsilva 11 dez 2023
 
-the BEST model according to metrics: 'CatBoostClassifier'
+the BEST model according to metrics: 'CatBoost Classifier'
+
+CatBoostClassifier model:
+accuracy........:99.1%
+score...........:98.85
+Mean Absolute Error: 0.00867
+Area under curve (AUC): 99.41 %
 ```
