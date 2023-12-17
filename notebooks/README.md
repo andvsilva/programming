@@ -155,4 +155,7 @@ accuracy........:99.1%
 score...........:98.85
 Mean Absolute Error: 0.00867
 Area under curve (AUC): 99.41 %
+
+## Cross Validation to catboost.
+https://www.geeksforgeeks.org/catboost-cross-validation-and-hyperparameter-tuning/
 ```
