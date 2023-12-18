@@ -17,6 +17,7 @@ import time
 from icecream import ic # Never use print() to debug again, ic a high level for debug
 import snoop # print the lines of code being executed in a function/ great feature very useful to debug :)
 from sklearn.preprocessing import StandardScaler
+from sklearn import preprocessing
 
 import toolkit as tool # see the file toolkit.py for more info
 import feather
@@ -43,46 +44,29 @@ df = df.rename(columns={'satisfaction_level': 'satisfaction',
                         'time_spend_company': 'yearsAtCompany',
                         'Work_accident': 'workAccident',
                         'promotion_last_5years': 'promotion',
-                        'sales' : 'department',
+                        'sales' : 'dept',
                         'left' : 'turnover'
                         })
 
 ic(df)
 ic(df['dept'].value_counts(normalize=True).map('{:.2%}'.format))
 
-# time of execution in minutes
-time_exec_min = round( (time.time() - start_time)/60, 4)
-
 # drop ID employeer
 df = df.drop(columns=['Emp ID'])
+#le = preprocessing.LabelEncoder()
 
-df_dept = df['dept']
-df_salary = df['salary']
-df_tover = df['turnover']
+#df['dept'] = le.fit_transform(df.dept.values)
+#df['salary'] = le.fit_transform(df.salary.values)
 
-
-cols_scaler = ['satisfaction', 'evaluation', 'projectCount',
-       'averageMonthlyHours', 'yearsAtCompany', 'workAccident',
-       'promotion']
-
-scaler = StandardScaler().fit(df[cols_scaler])
-
-df_scaler = scaler.transform(df[cols_scaler])
-
-df = pd.DataFrame(df_scaler,columns=cols_scaler, index=df.index)
-
-# Append the Series to the DataFrame
-df_result = pd.concat([df, df_dept], axis=1)
-
-df_help = pd.concat([df_result, df_salary], axis=1)
-df = pd.concat([df_help, df_tover], axis=1)
 ic(df)
 
 # Save DataFrame to CSV without index
 df.to_csv('../datasets/HR_COM1_cleaned.csv', index=False)
 
+# time of execution in minutes
+time_exec_min = round( (time.time() - start_time)/60, 4)
 
 print(f'time of execution (preprocessing): {time_exec_min} minutes')
 print("the preprocessing is done.")
-print("The next step is to do the feature engineering.")
+print("The next step is to do the modeling.")
 print("All Done. :)")

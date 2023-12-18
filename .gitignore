@@ -1,6 +1,7 @@
 *.exe
 *.exec
 *.zip
+*.csv
 consumer_complaints.csv
 *.ftr
 *.sqlite

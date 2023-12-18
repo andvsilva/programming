@@ -45,10 +45,7 @@ y = df['turnover']
 # define categorial features of dataset
 cat_features = ['dept', 'salary']  # List of categorical features
 
-X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2, random_state=123, stratify=y, shuffle = True)
-
-# Create CatBoost classifier
-#cat_model = CatBoostClassifier(iterations=100, depth=6, learning_rate=0.1, loss_function='Logloss', eval_metric='Accuracy')
+X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.2, random_state=123, stratify=y, shuffle = True)
 
 cat_model = CatBoostClassifier(
     iterations = 30, # 1000 are ideal
@@ -69,6 +66,7 @@ cat_model = CatBoostClassifier(
 print(cat_model.get_params())
 
 print('Train the model')
+
 
 # Train the model
 cat_model.fit(X_train, y_train, eval_set=(X_test, y_test), verbose=False)
