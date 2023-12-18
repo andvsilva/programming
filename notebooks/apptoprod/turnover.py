@@ -73,7 +73,7 @@ input_data = [satisfaction,
 prediction = cat_model.predict([input_data])[0]
 
 # Display the prediction
-st.subheader("Prediction: employees stay or left")
+st.subheader("employees: stay or left")
 
 if prediction == 0:
     prediction = 'stay'

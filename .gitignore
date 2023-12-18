@@ -1,6 +1,5 @@
 *.exe
 *.exec
 *.zip
-*.csv
-*.CSV
+*.ftr
 *.sqlite
