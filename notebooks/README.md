@@ -25,17 +25,22 @@ pip install pipreqs
 pipreqs ~/repo/programming/notebooks
 
 # requirements.txt libraries for the project
+catboost==1.1.1
 Faker==18.9.0
 feather==0.1.2
 feather_format==0.4.1
 icecream==2.1.3
+ipython==8.18.1
 matplotlib==3.7.0
 numpy==1.24.4
 pandas==1.3.5
+scikit_learn==1.3.2
 seaborn==0.13.0
 snoop==0.4.3
+streamlit==1.19.0
 tqdm==4.66.1
 varname==0.12.2
+
 
 # Just run this command to install
 # the libraries for the project.
@@ -159,3 +164,23 @@ Area under curve (AUC): 99.41 %
 ## Cross Validation to catboost.
 https://www.geeksforgeeks.org/catboost-cross-validation-and-hyperparameter-tuning/
 ```
+
+
+
+```bash
+# install streamlit to make an app:
+
+pip install streamlit
+
+# go to the folder:
+cd programming/notebooks/apptoprod
+
+$ streamlit run turnover.py           
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http...
+  Network URL: ...
+```
+
+You to access the URL http://...:... to see your app working. :smiley: Now enjoy!
