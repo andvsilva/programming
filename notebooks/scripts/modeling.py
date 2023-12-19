@@ -48,7 +48,7 @@ cat_features = ['dept', 'salary']  # List of categorical features
 X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.2, random_state=123, stratify=y, shuffle = True)
 
 cat_model = CatBoostClassifier(
-    iterations = 30, # 1000 are ideal
+    iterations = 300, # 1000 are ideal
     loss_function='MultiClass',
     bootstrap_type = "Bayesian",
     eval_metric = 'AUC',
@@ -74,7 +74,7 @@ y_pred_cat = cat_model.predict(X_test)
 
 print ("\n\n ---CatBoostClassifier Model---")
 cat_roc_auc = roc_auc_score(y_test, y_pred_cat)
-print ("CatBoost AUC = %2.2f" % cat_roc_auc)
+print ("CatBoost AUC = %2.4f" % cat_roc_auc)
 print(classification_report(y_test, y_pred_cat))
 
 metric_models('CatBoostClassifier', cat_model, X_test, y_test, y_pred_cat)
