@@ -36,7 +36,7 @@ def main():
         print('Successfully, go ahead to run the script.')
         
     # step 0    
-    #os.system('pip3 install -r requirements.txt')
+    #os.system('python3 -m pip install -r requirements.txt')
 
     # step 1
     os.system('python3 cleaning.py') # > logs/info-preprocess.dat
@@ -46,6 +46,8 @@ def main():
     
     # step 3
     os.system('python3 modeling.py') # > logs/training.dat
+
+    os.system('streamlit run turnover.py')
 
     time_exec_min = round( (time.time() - start_time)/60, 4)
     

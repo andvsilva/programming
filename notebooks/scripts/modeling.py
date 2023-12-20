@@ -63,7 +63,7 @@ cat_model = CatBoostClassifier(
     #task_type = "GPU",
 )
 
-print(cat_model.get_params())
+#print(cat_model.get_params())
 
 print('Train the model')
 
@@ -90,7 +90,7 @@ for feat, importance in zip(X.columns, cat_model.feature_importances_):
 
 # Save the trained model to a file
 print('saving the model to production...')
-cat_model.save_model('../apptoprod/catboost.cbm')
+cat_model.save_model('catboost.cbm')
 
 print("All Done. :)")
 

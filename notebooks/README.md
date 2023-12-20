@@ -184,3 +184,11 @@ $ streamlit run turnover.py
 ```
 
 You to access the URL http://...:... to see your app working. :smiley: Now enjoy!
+
+
+### To do!
+
+
+- [ ] Maybe we can apply the feature selection,like the 'SelectKBest' ```@andvsilva``` (https://machinelearningmastery.com/feature-selection-with-real-and-categorical-data/)
+
+

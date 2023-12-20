@@ -48,8 +48,8 @@ df = df.rename(columns={'satisfaction_level': 'satisfaction',
                         'left' : 'turnover'
                         })
 
-ic(df)
-ic(df['dept'].value_counts(normalize=True).map('{:.2%}'.format))
+#ic(df)
+#ic(df['dept'].value_counts(normalize=True).map('{:.2%}'.format))
 
 # drop ID employeer
 df = df.drop(columns=['Emp ID'])
@@ -58,7 +58,7 @@ df = df.drop(columns=['Emp ID'])
 #df['dept'] = le.fit_transform(df.dept.values)
 #df['salary'] = le.fit_transform(df.salary.values)
 
-ic(df)
+#ic(df)
 
 # Save DataFrame to CSV without index
 df.to_csv('../datasets/HR_COM1_cleaned.csv', index=False)

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/andvsilva/repo/programming/notebooks/explore/mlruns/800245663367329731/67468e83ce514c53afc3e6c6a1b7e848/artifacts
+end_time: 1703086785097
+entry_point_name: ''
+experiment_id: '800245663367329731'
+lifecycle_stage: active
+run_id: 67468e83ce514c53afc3e6c6a1b7e848
+run_name: Session Initialized 825e
+run_uuid: 67468e83ce514c53afc3e6c6a1b7e848
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703084207951
+status: 3
+tags: []
+user_id: andvsilva
