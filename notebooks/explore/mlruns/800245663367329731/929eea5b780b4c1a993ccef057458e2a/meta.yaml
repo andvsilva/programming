@@ -1,0 +1,15 @@
+artifact_uri: file:///home/andvsilva/repo/programming/notebooks/explore/mlruns/800245663367329731/929eea5b780b4c1a993ccef057458e2a/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '800245663367329731'
+lifecycle_stage: active
+run_id: 929eea5b780b4c1a993ccef057458e2a
+run_name: Session Initialized e077
+run_uuid: 929eea5b780b4c1a993ccef057458e2a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1703167896256
+status: 1
+tags: []
+user_id: andvsilva

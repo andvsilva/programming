@@ -188,7 +188,19 @@ You to access the URL http://...:... to see your app working. :smiley: Now enjoy
 
 ### To do!
 
-
 - [ ] Maybe we can apply the feature selection,like the 'SelectKBest' ```@andvsilva``` (https://machinelearningmastery.com/feature-selection-with-real-and-categorical-data/)
 
+### To Read and To study
 
+```@andvsilva```
+- [x] Label Encoder - [Label Encoding in Python](https://www.geeksforgeeks.org/ml-label-encoding-of-datasets-in-python/)
+- [x] groupby - code
+- [x] Correlation Methods - [Choosing the Right Correlation: Pearson vs. Spearman vs. Kendall’s Tau](https://ishanjain-ai.medium.com/choosing-the-right-correlation-pearson-vs-spearman-vs-kendalls-tau-02dc7d7dd01d)
+- [x] Pandas Profiling
+- [x] toolkit - Just a way to perform tasks and code will be more clean and organized, to call 'help functions'.
+- [x] Feature Importance - [Estimating feature importance, the easy way](https://romainlhardy.medium.com/estimating-feature-importance-the-easy-way-2ebe970c600c)
+- [x] Compare ```y_test``` to ```y_pred```
+- [x] R2 ajusted - [R-Squared vs Adjusted R-Squared](https://medium.com/analytics-vidhya/r-squared-vs-adjusted-r-squared-a3ebc565677b)
+- [ ] pycaret
+
+- [ ] ```mlflow``` - A good to make experiment in ML, I will study this. ```@andvsilva```

@@ -1,5 +1,5 @@
 artifact_uri: file:///home/andvsilva/repo/programming/notebooks/explore/mlruns/800245663367329731/96449feea706436b9535945bb25c27fc/artifacts
-end_time: null
+end_time: 1703126064636
 entry_point_name: ''
 experiment_id: '800245663367329731'
 lifecycle_stage: active
@@ -10,6 +10,6 @@ source_name: ''
 source_type: 4
 source_version: ''
 start_time: 1703086784757
-status: 1
+status: 3
 tags: []
 user_id: andvsilva
