@@ -202,5 +202,55 @@ You to access the URL http://...:... to see your app working. :smiley: Now enjoy
 - [x] Compare ```y_test``` to ```y_pred```
 - [x] R2 ajusted - [R-Squared vs Adjusted R-Squared](https://medium.com/analytics-vidhya/r-squared-vs-adjusted-r-squared-a3ebc565677b)
 - [ ] pycaret
-
 - [ ] ```mlflow``` - A good to make experiment in ML, I will study this. ```@andvsilva```
+- [How to Effectively Learn Data Science in 2024](https://medium.com/illumination/how-to-effectively-learn-data-science-in-2024-b3f508db4f67)
+- **To-do Checklist for Statistics For Data Scientist - STUDIES**:
+- [ ] a. Probability theory 
+- [ ] b. Descriptive Statistics
+- [ ] c. Inferential Statistics
+- [ ] d. Statistical Machine Learning, roadmap to study 
+
+![Workflow](/images/data_science_workflow.png) **NOT WORK markdown FIXME!**
+
+- **Data Extraction**:
+  - SQL
+  - Scrapping
+  - File Formats
+    - CSV
+    - JSON
+    - XML
+  - Consulting APIs
+  - Buying Data
+  - Distributed Databases
+
+- **Data Cleaning**:
+  - Missing values and empty data
+  - Data imputation
+  - Incorrect types
+  - Incorrect or invalid values
+  - Outliers and non relevant data
+  - Statistical sanitization
+
+- **Data Wrangling**
+  - Hierarchical Data
+  - Handling categorical data
+  - Reshaping and transforming structures
+  - Indexing data for quick access
+  - Merging, combining and joining data
+
+- **Analysis**
+  - Exploration
+  - Building statistical models
+  - Visualization and representations
+  - Correlation vs Causation analysis
+  - Hypothesis testing
+  - Statistical analysis
+  - Reporting
+
+- **Action**:
+  - Building Machine Learning Models
+  - Feature Engineering
+  - Moving ML into production
+  - Building ETL pipelines
+  - Live dashboard and reporting
+  - Decision making and real-life tests

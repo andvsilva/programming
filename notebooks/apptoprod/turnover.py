@@ -83,6 +83,7 @@ else:
     background_color = "red"
 
 
+
 #st.write("Turnover:", prediction)
     
 # Content to be centered
