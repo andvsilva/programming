@@ -210,7 +210,9 @@ You to access the URL http://...:... to see your app working. :smiley: Now enjoy
 - [ ] c. Inferential Statistics
 - [ ] d. Statistical Machine Learning, roadmap to study 
 
-![Workflow](/images/data_science_workflow.png) **NOT WORK markdown FIXME!**
+![Workflow](/images/data_science_workflow.png)
+
+#### To work on:
 
 - **Data Extraction**:
   - SQL
@@ -243,7 +245,9 @@ You to access the URL http://...:... to see your app working. :smiley: Now enjoy
   - Building statistical models
   - Visualization and representations
   - Correlation vs Causation analysis
-  - Hypothesis testing
+  - [x] Hypothesis testing (**Chi2** and **p-value**) file: [eda.ipynb](/explore/eda.ipynb) @andvsilva
+    - [A Gentle Introduction to Statistical Hypothesis Testing](https://machinelearningmastery.com/statistical-hypothesis-tests/)
+    - [17 Statistical Hypothesis Tests in Python (Cheat Sheet)](https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/)
   - Statistical analysis
   - Reporting
 
