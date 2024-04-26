@@ -1,0 +1,48 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{        }\PYG{n}{from}\PYG{+w}{ }\PYG{n}{Crypto}\PYG{p}{.}\PYG{n}{PublicKey}\PYG{+w}{ }\PYG{n}{import}\PYG{+w}{ }\PYG{n}{RSA}
+\PYG{+w}{        }\PYG{n}{from}\PYG{+w}{ }\PYG{n}{Crypto}\PYG{+w}{ }\PYG{n}{import}\PYG{+w}{ }\PYG{n}{Random}
+
+\PYG{+w}{        }\PYG{c+c1}{// Tamanho da chave RSA em bits}
+\PYG{+w}{        }\PYG{n}{tamanho\PYGZus{}chave}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1024}
+
+\PYG{+w}{        }\PYG{c+c1}{// Gerando um objeto Random}
+\PYG{+w}{        }\PYG{n}{rand\PYGZus{}gen}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Random}\PYG{p}{.}\PYG{n}{new}\PYG{p}{().}\PYG{n}{read}
+
+\PYG{+w}{        }\PYG{c+c1}{// Gerando as chaves RSA}
+\PYG{+w}{        }\PYG{n}{chave}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{RSA}\PYG{p}{.}\PYG{n}{generate}\PYG{p}{(}\PYG{n}{tamanho\PYGZus{}chave}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rand\PYGZus{}gen}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{c+c1}{// Separando as chaves privada e pública}
+\PYG{+w}{        }\PYG{n}{chave\PYGZus{}privada}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{chave}\PYG{p}{.}\PYG{n}{export\PYGZus{}key}\PYG{p}{()}
+\PYG{+w}{        }\PYG{n}{chave\PYGZus{}publica}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{chave}\PYG{p}{.}\PYG{n}{publickey}\PYG{p}{().}\PYG{n}{export\PYGZus{}key}\PYG{p}{()}
+
+\PYG{+w}{        }\PYG{c+c1}{// Salvando as chaves em arquivos}
+\PYG{+w}{        }\PYG{n}{with}\PYG{+w}{ }\PYG{n}{open}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}chave\PYGZus{}privada.pem\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}wb\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{as}\PYG{+w}{ }\PYG{n}{f}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n}{f}\PYG{p}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{chave\PYGZus{}privada}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{n}{with}\PYG{+w}{ }\PYG{n}{open}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}chave\PYGZus{}publica.pem\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}wb\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{as}\PYG{+w}{ }\PYG{n}{f}\PYG{o}{:}
+\PYG{+w}{            }\PYG{n}{f}\PYG{p}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{chave\PYGZus{}publica}\PYG{p}{)}
+
+\PYG{+w}{        }\PYG{n}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Chaves geradas e salvas com sucesso!\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{        }\PYG{c+c1}{//  \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}BEGIN PUBLIC KEY\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{    }\PYG{c+c1}{//  MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC/b7iIlUd+jevkmUfvDSeaCBHx}
+\PYG{+w}{    }\PYG{c+c1}{//  T1ffEMrgw4egU+OKZzAyFrg70AalUd/KgBwn8bbQyROWXyMpsiHWzyQEezxEbqZ1}
+\PYG{+w}{    }\PYG{c+c1}{//  QjGi/ILsGaleVKjmlKd6me7GyjB58Xf8yQLkwMBwkVbqekLQSPyiecdv7vJlHYh7}
+\PYG{+w}{    }\PYG{c+c1}{//  j/QxiMNo1dw6YKwAtwIDAQAB}
+\PYG{+w}{    }\PYG{c+c1}{//  \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}END PUBLIC KEY\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZpc{}}
+
+\PYG{+w}{    }\PYG{c+c1}{//  \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}BEGIN RSA PRIVATE KEY\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{    }\PYG{c+c1}{//  MIICXAIBAAKBgQC/b7iIlUd+jevkmUfvDSeaCBHxT1ffEMrgw4egU+OKZzAyFrg7}
+\PYG{+w}{    }\PYG{c+c1}{//  0AalUd/KgBwn8bbQyROWXyMpsiHWzyQEezxEbqZ1QjGi/ILsGaleVKjmlKd6me7G}
+\PYG{+w}{    }\PYG{c+c1}{//  yjB58Xf8yQLkwMBwkVbqekLQSPyiecdv7vJlHYh7j/QxiMNo1dw6YKwAtwIDAQAB}
+\PYG{+w}{    }\PYG{c+c1}{//  AoGAA4NhT4cKsgPRh2H1aymfB2CTiX+O4MXygk/LbKxtcoiC0IeexAuTO6XLghrr}
+\PYG{+w}{    }\PYG{c+c1}{//  4j+OooBg2XqsC1x1lUyQNXwttqfgJT5u5IHnm8weqKrqclZm8O+M+edqb+0COt0+}
+\PYG{+w}{    }\PYG{c+c1}{//  BdskrnUGSfJKeQp5QX7H6SRyUxoLSnp+lTnUE/moBtZ33TECQQDR7kc3ISrZ1bZk}
+\PYG{+w}{    }\PYG{c+c1}{//  WXO975zNKKa6fhUxiCXO8rk3gkPtqEwS2VWYQaMMiSNA2YxiJ5tTtXeZQ0qVwqYk}
+\PYG{+w}{    }\PYG{c+c1}{//  s0J+DbSRAkEA6XJyJoRCwMzAXgFocD6VyYp8c76qcQe7MIwgN6sJFgEP+CQwx2FH}
+\PYG{+w}{    }\PYG{c+c1}{//  bZqPyAs+OyKycDCVBQWO0wjLyGtg/7xkxwJAcenkRuv+fpnTEPzhK02cPk8yubu0}
+\PYG{+w}{    }\PYG{c+c1}{//  8F26dmOLUa2kAo/yR8AbDDWBrkm0EXp7DMAFLxUnQska7czjrsJ+8DuroQJBAOCm}
+\PYG{+w}{    }\PYG{c+c1}{//  /isKxKJ9Z/IPMM4zrDnTR4irR6KWahGCB88KjSfbxd5qFXcJqo9TWmKMT0rhTQ6h}
+\PYG{+w}{    }\PYG{c+c1}{//  8gZvHs7/e/xXOXVheykCQCmk4xr64EYuAkXyv4e9KJtdxTcPLQ22lb9tkEOl5TZT}
+\PYG{+w}{    }\PYG{c+c1}{//  4HewlpL7X3frLdKEgf3T0FxrR4itDmHhMkI1K9pTJuk=}
+\PYG{+w}{    }\PYG{c+c1}{//  \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}END RSA PRIVATE KEY\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZpc{}}
+\end{Verbatim}
