@@ -44,8 +44,8 @@
 \titleformat*{\section}{\bfseries\large}
 \titleformat*{\subsection}{\bfseries\normalsize}
 
-\title{ \textbf{\large Assinatura Digital com fun\c{c}\~ao Hash}}
-\author{}
+\title{ \textbf{\large Pr\'atica 04: Assinatura Digital com fun\c{c}\~ao Hash}}
+\author{Disciplina: Redes de Computadores}
 \date{28/04/24}
 \usepackage{minted}
 
@@ -113,11 +113,6 @@ usar e maior segurança.
 
 Em esta introdução, discutiremos os recursos do PyCryptodome, incluindo algoritmos 
 de hash, criptografia simétrica e assimétrica e assinatura digital.
-
-\section{Criptografia Simétrica}
-Para cifrar e decifrar dados, a criptografia simétrica usa uma única chave. Podemos 
-utilizar algoritmos como o AES (Advanced Encryption Standard) para criptografar e 
-descriptografar dados de forma eficiente no PyCryptodome.
 
 \section{Criptografia Assimétrica}
 Uma chave privada e uma chave pública são usados na criptografia assimétrica. O 
@@ -201,9 +196,6 @@ e envia para o cliente.
 \item Rode o Wireshark e veja o funcionamento do seu programa na rede.
 \end{enumerate}
 
-
-\section*{Resolu\c{c}\~ao:}
-
 A configuração em que o servidor e o cliente usam assinaturas digitais com uma chave 
 pública RSA e um hash SHA256. Para enviar uma mensagem ao servidor de forma segura e garantir sua autenticidade e 
 integridade, o cliente deve seguir os passos a seguir:
@@ -238,64 +230,135 @@ os seguintes passos:
     \begin{itemize}
         \item Se a assinatura digital for válida, o servidor processa a mensagem.
     \end{itemize}
-    \end{enumerate}
+\end{enumerate}
 
 Ao permitir que apenas o cliente use sua chave privada para criar a assinatura digital, essa técnica 
 garante que a mensagem seja verdadeira e confiável. Além disso, como a assinatura é baseada no hash 
 SHA256 da mensagem, qualquer mudança na mensagem seria detectada durante a verificação da assinatura. 
 Agora, vamos criar a chave p\'ublica-privada com um script python:
 
-    \begin{listing}[!h]
-        \begin{minted}{c}
-        from Crypto.PublicKey import RSA
-        from Crypto import Random
-    
-        // Tamanho da chave RSA em bits
-        tamanho_chave = 1024
-    
-        // Gerando um objeto Random
-        rand_gen = Random.new().read
-    
-        // Gerando as chaves RSA
-        chave = RSA.generate(tamanho_chave, rand_gen)
-    
-        // Separando as chaves privada e pública
-        chave_privada = chave.export_key()
-        chave_publica = chave.publickey().export_key()
-    
-        // Salvando as chaves em arquivos
-        with open("chave_privada.pem", "wb") as f:
-            f.write(chave_privada)
-    
-        with open("chave_publica.pem", "wb") as f:
-            f.write(chave_publica)
-    
-        print("Chaves geradas e salvas com sucesso!")
-        //  -----BEGIN PUBLIC KEY-----
-    //  MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC/b7iIlUd+jevkmUfvDSeaCBHx
-    //  T1ffEMrgw4egU+OKZzAyFrg70AalUd/KgBwn8bbQyROWXyMpsiHWzyQEezxEbqZ1
-    //  QjGi/ILsGaleVKjmlKd6me7GyjB58Xf8yQLkwMBwkVbqekLQSPyiecdv7vJlHYh7
-    //  j/QxiMNo1dw6YKwAtwIDAQAB
-    //  -----END PUBLIC KEY-----% 
-    
-    //  -----BEGIN RSA PRIVATE KEY-----
-    //  MIICXAIBAAKBgQC/b7iIlUd+jevkmUfvDSeaCBHxT1ffEMrgw4egU+OKZzAyFrg7
-    //  0AalUd/KgBwn8bbQyROWXyMpsiHWzyQEezxEbqZ1QjGi/ILsGaleVKjmlKd6me7G
-    //  yjB58Xf8yQLkwMBwkVbqekLQSPyiecdv7vJlHYh7j/QxiMNo1dw6YKwAtwIDAQAB
-    //  AoGAA4NhT4cKsgPRh2H1aymfB2CTiX+O4MXygk/LbKxtcoiC0IeexAuTO6XLghrr
-    //  4j+OooBg2XqsC1x1lUyQNXwttqfgJT5u5IHnm8weqKrqclZm8O+M+edqb+0COt0+
-    //  BdskrnUGSfJKeQp5QX7H6SRyUxoLSnp+lTnUE/moBtZ33TECQQDR7kc3ISrZ1bZk
-    //  WXO975zNKKa6fhUxiCXO8rk3gkPtqEwS2VWYQaMMiSNA2YxiJ5tTtXeZQ0qVwqYk
-    //  s0J+DbSRAkEA6XJyJoRCwMzAXgFocD6VyYp8c76qcQe7MIwgN6sJFgEP+CQwx2FH
-    //  bZqPyAs+OyKycDCVBQWO0wjLyGtg/7xkxwJAcenkRuv+fpnTEPzhK02cPk8yubu0
-    //  8F26dmOLUa2kAo/yR8AbDDWBrkm0EXp7DMAFLxUnQska7czjrsJ+8DuroQJBAOCm
-    //  /isKxKJ9Z/IPMM4zrDnTR4irR6KWahGCB88KjSfbxd5qFXcJqo9TWmKMT0rhTQ6h
-    //  8gZvHs7/e/xXOXVheykCQCmk4xr64EYuAkXyv4e9KJtdxTcPLQ22lb9tkEOl5TZT
-    //  4HewlpL7X3frLdKEgf3T0FxrR4itDmHhMkI1K9pTJuk=
-    //  -----END RSA PRIVATE KEY-----% 
-    \end{minted}
-    \caption{Chaves geradas - p\'ublica-privada.}
-    \end{listing}
+\begin{listing}[!ht]
+    \begin{minted}{c}
+    from Crypto.PublicKey import RSA
+    from Crypto import Random
+
+    // Tamanho da chave RSA em bits
+    tamanho_chave = 1024
+
+    // Gerando um objeto Random
+    rand_gen = Random.new().read
+
+    // Gerando as chaves RSA
+    chave = RSA.generate(tamanho_chave, rand_gen)
+
+    // Separando as chaves privada e pública
+    chave_privada = chave.export_key()
+    chave_publica = chave.publickey().export_key()
+
+    // Salvando as chaves em arquivos
+    with open("chave_privada.pem", "wb") as f:
+        f.write(chave_privada)
+
+    with open("chave_publica.pem", "wb") as f:
+        f.write(chave_publica)
+
+    print("Chaves geradas e salvas com sucesso!")
+\end{minted}
+\caption{Chaves geradas - publica-privada.}
+\end{listing}
+
+\begin{listing}[!ht]
+\begin{minted}{c}
+// -----BEGIN PUBLIC KEY-----
+// MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIwVpFBwp83YsLBpZen+j5bP/d
+// io/guJA1YtdyRIkERqjkeySaoRNCqSnhuZfLN26gdyxGxuarCtJ4o02a/aRCeBgX
+// gyFjf/HIqKu/gZnd2csSLR8BPKpRMc91iLou1utZ2o6vSdesEfQR5NczovBAKUx6
+// 7kLjXGdF/Vhtfi1lAQIDAQAB
+// -----END PUBLIC KEY-----%                                                                                                                         
+
+// -----BEGIN RSA PRIVATE KEY-----
+// MIICXAIBAAKBgQDIwVpFBwp83YsLBpZen+j5bP/dio/guJA1YtdyRIkERqjkeySa
+// oRNCqSnhuZfLN26gdyxGxuarCtJ4o02a/aRCeBgXgyFjf/HIqKu/gZnd2csSLR8B
+// PKpRMc91iLou1utZ2o6vSdesEfQR5NczovBAKUx67kLjXGdF/Vhtfi1lAQIDAQAB
+// AoGAPCa2+ezIpy4oTabtIjAOucF/jq1IO+CBEQXrIOlJFpdnXoJJLu2pXDVcf65A
+// vZp/0qOyiAhrr/8fnhbsF079SodRc+qgJR/6odo2bnVaFWf4H0sDjNeN38rEbETv
+// IktoXOcei9dKUcwIQvzFIHI8cz/VuAgcO6MT9LKvjMRJKDsCQQDcOZZZi4OCwndF
+// vxMXICekCwlTkvBglginmpIbbh9X5ifAXxqZJ5dHi9aT35NH7oLMxJkNOSM89+FA
+// 4SL23g6jAkEA6V4WajcegY1XssWogErO17OEA7rvgNgHUhlrR8IsGu8AtkjOzfQj
+// s0kNuBngzjCHjDhpLcAkAgDFe0WA7xJsCwJABqdGv5XTd1Pgvp6zOPOjvvUGZxv9
+// Xy2pPUcSOvnswH8XnFxDNXVYwLSc2wLaNEYkdYNLDHc5dVIX4BntMIAs+QJAB5Ea
+// bvU8kvzPRCeukAJc9JeIh0pva6EVk67pUJlWLsVjI4X21qy835pVzItiQ61FJ+HI
+// X0hkon/950JYrOfPAwJBAJEB9r9jiCYm/rloJOcHksmAXcX1E3DOsR4Wa5eq/FCg
+// 7D+4eKHUepnUnz9/Gd6+XjxPsri/BrXjd/PUqFAbWa4=
+// -----END RSA PRIVATE KEY-----%
+
+\end{minted}
+\caption{Chaves geradas - publica-privada.}
+\end{listing}
+
+\newpage
+\newpage
+
+\begin{itemize}
+\item A chave p\'ublica do servidor foi previamente compartilhada para o cliente.
+\item O servidor inicializa e fica aguardando conex\~ao.
+\end{itemize}
+
+Agora, vamos escrever o c\'odigo para o servidor:
+
+\begin{listing}[!ht]
+\begin{minted}{c}
+    // servidor:
+    import socket
+    from Crypto.Hash import SHA256
+    from Crypto.Signature import pkcs1_15
+    from Crypto.PublicKey import RSA
+
+    // Chave pública do servidor (previamente compartilhada)
+    chave_publica_servidor = None  # Insira a chave pública aqui
+
+    // Inicializando o socket do servidor
+    host = 'localhost'
+    porta = 12346
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.bind((host, porta))
+    server_socket.listen(1)
+
+    // Carregando a chave privada do arquivo
+    with open("chave_privada.pem", "rb") as f:
+        chave_privada_servidor = RSA.import_key(f.read())
+
+    print("Servidor aguardando conexão...")
+
+    while True:
+        // Aceitando a conexão
+        conn, addr = server_socket.accept()
+        print("Conectado com", addr)
+
+        // Recebendo o desafio do cliente
+        desafio = conn.recv(1024).decode('utf-8')
+        print("")
+        print(f"desafio: {desafio}")
+
+        // Calculando o hash do desafio
+        hash_desafio = SHA256.new(desafio.encode('utf-8'))
+        print("")
+        print(f"hash(desafio) >>> {hash_desafio}")
+
+        // Assinando o hash com a chave privada do servidor
+        assinatura = pkcs1_15.new(chave_privada_servidor).sign(hash_desafio)
+        print("")
+        print(f"server(assinatura) >>> {assinatura}")
+
+        // Enviando a assinatura para o cliente
+        conn.send(assinatura)
+
+        // Fechando a conexão
+        conn.close()    
+\end{minted}
+\caption{Chaves geradas - publica-privada.}
+\end{listing}
+
 
 %%%%%%%% Bibliography 
 % Os comandos para incluir as referências bibliográficas
