@@ -299,7 +299,6 @@ Agora, vamos criar a chave p\'ublica-privada com um script python:
 \newpage
 \newpage
 
-
 \begin{itemize}
 \item A chave p\'ublica do servidor foi previamente compartilhada para o cliente.
 \item O servidor inicializa e fica aguardando conex\~ao.
@@ -316,7 +315,7 @@ Agora, vamos escrever o c\'odigo para o servidor:
     from Crypto.PublicKey import RSA
 
     // Chave pública do servidor (previamente compartilhada)
-    chave_publica_servidor = None  # Insira a chave pública aqui
+    chave_publica_servidor = None  // Insira a chave pública aqui
 
     // Inicializando o socket do servidor
     host = 'localhost'
