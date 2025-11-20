@@ -1,0 +1,16 @@
+=== CPU BENCHMARK RESULTS ===
+Timestamp: 2025-11-20 20:58:25.600675
+
+Operating System: Linux 6.8.0-87-generic
+CPU: x86_64
+Detected Cores: 4
+Matrix Size: 8000
+
+--- Per-Core Times ---
+Core 1: 12.6398 seconds
+Core 2: 12.9246 seconds
+Core 3: 10.9976 seconds
+Core 4: 10.4506 seconds
+
+--- Parallel Performance ---
+All cores time: 42.9178 seconds
