@@ -5,3 +5,16 @@
 consumer_complaints.csv
 *.ftr
 *.sqlite
+# Jupyter auto files
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# OS files
+.DS_Store
